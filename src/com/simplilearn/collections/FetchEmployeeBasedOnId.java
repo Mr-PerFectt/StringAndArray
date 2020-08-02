@@ -1,10 +1,10 @@
 package com.simplilearn.collections;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
-public class TestEmployeeList {
+public class FetchEmployeeBasedOnId {
 
 	public static void main(String[] args) {
 		
@@ -22,15 +22,16 @@ public class TestEmployeeList {
 		empList.add(emp3);
 		empList.add(emp4);
 		
-		// iterate employee
-		for(Employee emp : empList) {
-			System.out.println("-------------------------");
-			System.out.println("The Employee Name"+emp.getEmpName());
-			System.out.println("The Employee Id "+emp.getEmpId());
-			System.out.println("The Employee "+emp.getEmpSalary());
-			System.out.println("The Employee "+emp.getEmpDepartment());
-		}
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Employee Id :");
+		int id = input.nextInt();
 		
+		for(Employee emp :empList ) {
+			if(emp.getEmpId()==id) {
+				System.out.println("Employee is found with Name : "+emp.getEmpName() 
+				+"  which belongs to department "+emp.getEmpDepartment());
+			}
+		}
 
 	}
 
