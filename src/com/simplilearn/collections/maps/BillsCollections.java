@@ -2,7 +2,7 @@
 package com.simplilearn.collections.maps;
 import java.util.*;
 public class BillsCollections {
-
+// Bills exercise using Tree Map
 	public static void main(String[] args) {
 
 		TreeMap<Double, String> bills = new TreeMap<Double, String>();
